@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<style>
+		#display {
+			font-size: 2em;
+		}
+		body{
+			background-color: bisque;
+		}
+		#calculator{
+			background-color: white;
+		}
+	</style>
+
+	<!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+		</div> <!-- .row -->
+		<div class="row">
+			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
+				<div class="row">
+					<input type="text" id="display" class="col-12 text-right form-control" value="0">
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-9 btn btn-lg btn-outline-danger" id="ac">AC</button> <!-- 0 -->
+					<button class="col-3 btn btn-lg btn-outline-warning" id="divide">/</button> <!-- 1 -->
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-3 btn btn-lg btn-outline-primary" id="seven">7</button> <!-- 2 -->
+					<button class="col-3 btn btn-lg btn-outline-primary" id="eight">8</button> <!-- 3 -->
+					<button class="col-3 btn btn-lg btn-outline-primary" id="nine">9</button> <!-- 4 -->
+					<button class="col-3 btn btn-lg btn-outline-warning" id="multiply">x</button> <!-- 5 -->
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-3 btn btn-lg btn-outline-primary" id="four">4</button> <!-- 6 -->
+					<button class="col-3 btn btn-lg btn-outline-primary" id="five">5</button> <!-- 7 -->
+					<button class="col-3 btn btn-lg btn-outline-primary" id="six">6</button> <!-- 8 -->
+					<button class="col-3 btn btn-lg btn-outline-warning" id="subtract">-</button> <!-- 9 -->
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-3 btn btn-lg btn-outline-primary" id="one">1</button> <!-- 10 -->
+					<button class="col-3 btn btn-lg btn-outline-primary" id="two">2</button> <!-- 11 -->
+					<button class="col-3 btn btn-lg btn-outline-primary" id="three">3</button> <!-- 12 -->
+					<button class="col-3 btn btn-lg btn-outline-warning" id="add">+</button> <!-- 13 -->
+				</div> <!-- .row -->
+				<div class="row">
+					<button class="col-6 btn btn-lg btn-outline-primary" id="zero">0</button> <!-- 14 -->
+					<button class="col-3 btn btn-lg btn-outline-dark" id="decimal">.</button> <!-- 15 -->
+					<button class="col-3 btn btn-lg btn-outline-success" id="equal">=</button> <!-- 16 -->
+				</div> <!-- .row -->
+			</div> <!-- #calculator -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+</body>
+</html>
