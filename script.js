@@ -1,18 +1,3 @@
-/*
-    1. User enters the first number (could be multi-digit)
-        a. String concatenation
-    2. User presses an operation (addition, subtraction, multiplication, or division)
-    3. User enters the second number (could be multi-digit)
-    4. User presses = button to see the result
-    5. User presses AC button to clear the display (show 0)
-    */
-
-    /*
-    1. Make 'display' variable
-    2. Save 'display' into 'num1' 
-    3. Clear 'display' variable
-    */
-
 //global variables
 let output = "";
 let previousNumber;
@@ -48,22 +33,24 @@ document.getElementById("ac").onclick = function() {clearData()};
 
 //function that displays number
 function display(num){
+    //this is the case where user clicks on the equal sign then presses the number so all data should be cleared
     if(previousOperator == "="){
         clearData();
     }
     
+    //this is to prevent multiple 0's at the beginning of the display ex: 0000
     if(num == "0" && output == ""){
 
     }
     else{
-        if(num != "."){
+        if(num != "."){ //checks for the decimal and outputs the number
             output = output + num;
             document.getElementById("display").value = output;
         }
-        else if(num == "." && output.includes(".")){
+        else if(num == "." && output.includes(".")){ //if the output already has the decimal then it does nothing
             
         }
-        else if(num == "."){
+        else if(num == "."){ //if output doesn't have the decimal then it adds it
             output = output + num;
             document.getElementById("display").value = output;
         }
@@ -88,22 +75,22 @@ function clearDisplay(currentOperator){
 
     //check for equal sign
     if(currentOperator != "="){
-        if(previousOperator == null || previousOperator == "="){ //initial operator
+        if(previousOperator == null || previousOperator == "="){ //initial operator or new operator pressed right after the equal sign
             document.getElementById("display").value = currentOperator;
             previousOperator = currentOperator;
             lastOperator = currentOperator;
         }
-        else{
+        else{ //case of last operator and current operator were both not equal sign so multiple number operation
             calculator(previousNumber, previousOperator, currentNumber);
             previousOperator = currentOperator;
             document.getElementById("display").value = currentOperator;
         }
     }
-    else if(currentOperator == "=" && previousOperator != "=" && currentNumber != ""){
+    else if(currentOperator == "=" && previousOperator != "=" && currentNumber != ""){ //user presses an operator right after equal then presses a number
         calculator(previousNumber, previousOperator, currentNumber);
         previousOperator = currentOperator;
     }
-    else if(currentOperator == "=" && previousOperator == "="){
+    else if(currentOperator == "=" && previousOperator == "="){ //case where user presses equal button right after pressing it
         calculator(previousNumber, lastOperator, currentNumber);
         previousOperator = currentOperator;
     }
@@ -147,6 +134,7 @@ function calculator(num1, operator, num2){
     }
 }
 
+//clears and resets all variables/display
 function clearData(){
     document.getElementById("display").value = 0;
     output = "";
