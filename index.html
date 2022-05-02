@@ -11,10 +11,12 @@
 			font-size: 2em;
 		}
 		body{
-			background-color: bisque;
+			height: 100vh;
+			background-size: cover;
+			background-image: url(https://i.pinimg.com/originals/c3/7c/7d/c37c7db3f6e1d9aa8f5292e7008029d5.gif);
 		}
 		#calculator{
-			background-color: white;
+			box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.479), 0 6px 20px 0 rgba(255, 255, 255, 0.919);
 		}
 	</style>
 
@@ -24,7 +26,7 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<h1 class="col-12 text-center mt-5">JS Calculator</h1>
+			<h1 class="col-12 text-center mt-5 text-white">JS Calculator</h1>
 		</div> <!-- .row -->
 		<div class="row">
 			<div id="calculator" class="mt-4 col-12 col-md-6 ml-md-auto mr-md-auto col-lg-4">
@@ -55,7 +57,7 @@
 				</div> <!-- .row -->
 				<div class="row">
 					<button class="col-6 btn btn-lg btn-outline-primary" id="zero">0</button> <!-- 14 -->
-					<button class="col-3 btn btn-lg btn-outline-dark" id="decimal">.</button> <!-- 15 -->
+					<button class="col-3 btn btn-lg btn-outline-light text-dark" id="decimal">.</button> <!-- 15 -->
 					<button class="col-3 btn btn-lg btn-outline-success" id="equal">=</button> <!-- 16 -->
 				</div> <!-- .row -->
 			</div> <!-- #calculator -->
